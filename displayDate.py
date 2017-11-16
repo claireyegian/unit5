@@ -4,9 +4,16 @@
 
 from datetime import date
 
-today = datetime.date.today()
+today = date.today()
 day = today.day
 month = today.month
 year = today.year
+week = today.weekday()
 
-print(day, month, year)
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+monthToday = months[month-1]
+weekDay = weekDays[week]
+
+print('Today is '+weekDay+', '+monthToday+' '+str(day)+' '+str(year))
