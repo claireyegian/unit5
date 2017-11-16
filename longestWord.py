@@ -6,9 +6,13 @@ words = input('Enter a list of words: ').split(' ')
 
 longestWord = 0
 listLength = len(words)
+longestword = ''
 i = 0
-while i<=(listLength+1):
+while i<(listLength):
     word = words[i]
-    if len.word>=longestWord:
-        longestWord = word
+    if len(word)>=longestWord:
+        longestWord = len(word)
+        longestword = word
     i += 1
+
+print(longestword)
