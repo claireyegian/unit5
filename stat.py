@@ -13,7 +13,7 @@ numbers.sort()
 
 def mode():
     numberOf = 0
-    highestNumberOf
+    highestNumberOf = 0
     mostCommon = ''
     placement = 0
     for item in numbers:
@@ -22,11 +22,12 @@ def mode():
             if numberOf>highestNumberOf:
                 highestNumberOf == numberOf
                 mostCommon == item
-    print(mostCommon)
+        placement += 1
+    print('Mode:',mostCommon)
     
 print('Min:',min(numbers))
 print('Max:',max(numbers))
 if len(numbers)%2==0:
     print('Median:',numbers[len(numbers)/2 - 1],',',numbers[len(numbers)/2])
 print('Mean:',sum(numbers)/len(numbers))
-print(mode())
+mode()
