@@ -18,10 +18,10 @@ def mode():
     placement = 0
     for item in numbers:
         if item == numbers[placement-1]:
-            numberOf == 2
+            numberOf = 2
             if numberOf>highestNumberOf:
-                highestNumberOf == numberOf
-                mostCommon == item
+                highestNumberOf = numberOf
+                mostCommon = item
         placement += 1
     print('Mode:',mostCommon)
     
