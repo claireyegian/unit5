@@ -20,12 +20,12 @@ def step():
 if __name__ == '__main__':
     
     red = Color(0xFF0000,1)
-    ant = CircleAsset(10,LineStyle(1,red),red)
+    ant = CircleAsset(3,LineStyle(1,red),red)
     
     data = {}
     data['antList'] = []
     
-    for i in range(10):
+    for i in range(50):
         data['antList'].append(Sprite(ant,(randint(1,WIDTH),randint(1,HEIGHT))))
     
     App().run(step)
