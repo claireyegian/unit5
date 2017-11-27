@@ -38,7 +38,13 @@ def mySort(A):
             if A[i] > A[i + 1]:
                 A[i], A[i + 1] = A[i + 1], A[i] #how to swap in Python
                 swapped = True
-        
+        if not swapped:
+            break
+        swapped = False
+        for i in range(len(A)-2,-1,-1):
+            if A[i] > A[i + 1]:
+                A[i], A[i + 1] = A[i + 1], A[i] #how to swap in Python
+                swapped = True
     return A
 
 if __name__ == '__main__':
