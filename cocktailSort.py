@@ -5,7 +5,7 @@
 from random import randint
 from time import time
 
-N = 100 #how many numbers will be sorted
+N = 1000 #how many numbers will be sorted
 
 """procedure cocktailShakerSort( A : list of sortable items ) defined as:
   do
