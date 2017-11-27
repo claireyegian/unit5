@@ -9,10 +9,10 @@ while True:
     
     if command[0:3] == 'add':
         commandList.append(command[4:])
-    if command[0] == 'delete':
-        commandList.delete(command[7:])
-    if command[0] == 'print:
+    if command[0:6] == 'delete':
+        commandList.remove(command[7:])
+    if command[0:5] == 'print':
         for item in commandList:
             print(item)
-    if commandList[0] == 'quit':
-        quit
+    if command[0:4] == 'quit':
+        break
