@@ -31,8 +31,58 @@ N = 1000 #how many numbers will be sorted
     return merge(left, right)"""
 
 def mySort(A):
+    if len(A)<=1:
+        varLeft = []
+        varRight = []
+        for i in range(0,len(A)):
+            if i < len(A)/2:
+                varLeft.append(A[i])
+            else:
+                varRight.append(A[i])
+        mySort(varLeft)
+        mySort(varRight)
+
+        merge(varLeft,varRight)
+
+"""function merge(left, right)
+    var result := empty list
+
+    while left is not empty and right is not empty do
+        if first(left) ≤ first(right) then
+            append first(left) to result
+            left := rest(left)
+        else
+            append first(right) to result
+            right := rest(right)
+
+    // Either left or right may have elements left; consume them.
+    // (Only one of the following loops will actually be entered.)
+    while left is not empty do
+        append first(left) to result
+        left := rest(left)
+    while right is not empty do
+        append first(right) to result
+        right := rest(right)
+    return result"""
+
+def merge(left,right):
+    result = []
+    while len(left)!=0 and len(right)!=0:
+        if left[0] <= right[0]:
+            result.append(left[0])
+            left = left[1:]
+        else:
+            result.append(right[0])
+            right = right[1:]
     
-    return A
+    while len(left)!=0:
+        result.append(left[0])
+        left = left[1:]
+    while len(right)!=0:
+        result.append(right[0])
+        right = right[1:]
+    
+    return result
 
 if __name__ == '__main__':
     
