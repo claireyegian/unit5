@@ -5,7 +5,7 @@
 from random import randint
 from time import time
 
-N = 1000 #how many numbers will be sorted
+N = 100 #how many numbers will be sorted
 
 """function merge_sort(list m)
     // Base case. A list of zero or one elements is sorted, by definition.
@@ -32,18 +32,18 @@ N = 1000 #how many numbers will be sorted
 
 def mySort(A):
     if len(A)<=1:
-        varLeft = []
-        varRight = []
-        for i in range(0,len(A)):
-            if i < len(A)/2:
-                varLeft.append(A[i])
-            else:
-                varRight.append(A[i])
-        mySort(varLeft)
-        mySort(varRight)
+        return(A)
+    varLeft = []
+    varRight = []
+    for i in range(0,len(A)):
+        if i < len(A)/2:
+            varLeft.append(A[i])
+        else:
+            varRight.append(A[i])
+    varLeft = mySort(varLeft)
+    varRight = mySort(varRight)
 
-        merge(varLeft,varRight)
-    return(A)
+    return(merge(varLeft,varRight))
 
 """function merge(left, right)
     var result := empty list
@@ -82,7 +82,6 @@ def merge(left,right):
     while len(right)!=0:
         result.append(right[0])
         right = right[1:]
-    
     return result
 
 if __name__ == '__main__':
