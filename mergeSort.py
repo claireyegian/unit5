@@ -43,6 +43,7 @@ def mySort(A):
         mySort(varRight)
 
         merge(varLeft,varRight)
+    return(A)
 
 """function merge(left, right)
     var result := empty list
