@@ -7,7 +7,9 @@ from random import randint
 
 def step():
     for item in flakeList:
-        item.y += 1
+        for i in range(0,len(flakeList)-1):
+            flakeList[i].y += 1
+            i += 1
     
 if __name__ == '__main__':
     black = Color(0x000000,1)
@@ -17,8 +19,8 @@ if __name__ == '__main__':
     snowflake = RectangleAsset(5,5,LineStyle(1,white),white)
     
     Sprite(rectangle)
+    flakeList = []
     for i in range (0,100):
-        flakeList = []
         flakeList.append(Sprite(snowflake,(randint(0,400),0)))
         i += 1
     App().run(step)
