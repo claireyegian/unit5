@@ -6,13 +6,17 @@ from ggame import *
 from random import randint
 
 def step():
+    flake = Sprite(snowflake,(randint(0,400),0))
+    flakeList.append(flake)
     for item in flakeList:
-        Sprite(item)
         item.y += 1
         if item.y > 15:
                 step()
     
 if __name__ == '__main__':
+    
+    flakeList = []
+    
     black = Color(0x000000,1)
     white = Color(0xffffff,1)
     
@@ -20,8 +24,4 @@ if __name__ == '__main__':
     snowflake = RectangleAsset(5,5,LineStyle(1,white),white)
     
     Sprite(rectangle)
-    flakeList = []
-    for i in range (0,100):
-        flakeList.append(Sprite(snowflake,(randint(0,400),0)))
-        i += 1
     App().run(step)
