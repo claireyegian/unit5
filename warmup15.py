@@ -5,8 +5,8 @@
 def double(numbers):
     numbers2 = []
     for item in numbers:
-        item += item
+        item = item*2
         numbers2.append(item)
     return(numbers2)
 
-print(double([2,4,6]))
+print(double([3,4,6]))
