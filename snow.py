@@ -8,7 +8,11 @@ from random import randint
 def step():
     for item in flakeList:
         for i in range(0,len(flakeList)-1):
-            flakeList[i].y += 1
+            flake = flakeList[i]
+            flake.y += 1
+            if flake.y > 15:
+                nextFlake= flakeList[i + 1]
+                nextFlake.y += 1
             i += 1
     
 if __name__ == '__main__':
