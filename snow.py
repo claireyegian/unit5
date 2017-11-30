@@ -7,16 +7,14 @@ from random import randint
 
 def step():
     flake = Sprite(snowflake,(randint(0,400),0))
-    data[flakeList].append(flake)
-    for item in data[flakeList]:
+    data['flakeList'].append(flake)
+    for item in data['flakeList']:
         item.y += 1
-        if item.y > 15:
-                step()
     
 if __name__ == '__main__':
     
     data = []
-    data[flakeList = []]
+    data['flakeList'] = []
     
     black = Color(0x000000,1)
     white = Color(0xffffff,1)
