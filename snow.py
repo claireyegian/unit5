@@ -7,6 +7,7 @@ from random import randint
 
 def step():
     for item in flakeList:
+        Sprite(item)
         item.y += 1
         if item.y > 15:
                 step()
@@ -21,6 +22,6 @@ if __name__ == '__main__':
     Sprite(rectangle)
     flakeList = []
     for i in range (0,100):
-        flakeList.append(Sprite(snowflake,(randint(0,400),0)))
+        flakeList.append('snowflake,(randint(0,400),0)')
         i += 1
     App().run(step)
