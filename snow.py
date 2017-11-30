@@ -3,14 +3,15 @@
 #snow.py - creates image of falling snow
 
 from ggame import *
+from random import randint
 
 black = Color(0x000000,1)
 white = Color(0xffffff,1)
 
-Rectangle = RectangleAsset(400,400,LineStyle(1,black),black)
-Rectangle2 = RectangleAsset(400,400,LineStyle(1,black),white)
+rectangle = RectangleAsset(400,400,LineStyle(1,black),black)
+snowflake = RectangleAsset(5,5,LineStyle(1,white),white)
 
-Sprite(Rectangle)
-Sprite(Rectangle2)
+Sprite(rectangle)
+Sprite(snowflake,(randint(0,400),0))
 App().run()
 
