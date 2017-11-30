@@ -22,6 +22,6 @@ if __name__ == '__main__':
     Sprite(rectangle)
     flakeList = []
     for i in range (0,100):
-        flakeList.append('snowflake,(randint(0,400),0)')
+        flakeList.append(Sprite(snowflake,(randint(0,400),0)))
         i += 1
     App().run(step)
