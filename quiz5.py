@@ -1,6 +1,6 @@
 #Claire Yegian
 #12/3/17
-#quiz5.py - functions 1-3
+#quiz5.py - functions 1-4
 
 from random import randint
 
